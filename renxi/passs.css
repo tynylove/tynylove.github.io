@@ -1,0 +1,34 @@
+
+.form-3 {
+    font-family: 'Ubuntu', 'Lato', sans-serif;
+    font-weight: 400;
+    /* Size and position */
+    width: 300px;
+	height: 100px;
+    position: relative;
+    margin: 280px auto 30px;
+    padding: 10px;
+    overflow: hidden;
+}
+ 
+.form-3 input[type=password] {
+    /* Size and position */
+    width: 38%;
+    float: left;
+    padding: 8px 5px;
+    font-size: 12px;
+	position: relative;
+    margin: 25px 166px;
+ 
+    /* Styles */
+    background: #ffe;
+    border: 1px solid #be1a25;
+    box-shadow:
+        0 1px 0 rgba(255,255,255,0.1);
+    border-radius: 3px;
+ 
+    /* Font styles */
+    font-family: 'Ubuntu', 'Lato', sans-serif;
+    color: #be1a25;
+ 
+}
