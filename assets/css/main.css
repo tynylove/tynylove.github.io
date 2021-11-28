@@ -117,7 +117,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 600px) {
+		@media screen and (max-width: 333px) {
 
 			body {
 				background-attachment: scroll;
@@ -220,7 +220,7 @@ input, select, textarea {
 				margin-left: 0;
 			}
 
-		@media screen and (max-width: 600px) {
+		@media screen and (max-width: 333px) {
 
 			ul.icons {
 				margin: 0 0 2em 0;
@@ -303,7 +303,7 @@ input, select, textarea {
 			filter: blur(0.25em);
 		}
 
-		@media screen and (max-width: 600px) {
+		@media screen and (max-width: 333px) {
 
 			#wrapper {
 				min-height: 0;
@@ -332,7 +332,7 @@ input, select, textarea {
 			right: 0;
 		}
 
-		@media screen and (max-width: 600px) {
+		@media screen and (max-width: 333px) {
 
 			.scrollZone {
 				display: none;
@@ -545,7 +545,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 600px) {
+		@media screen and (max-width: 333px) {
 
 			#main {
 				width: 100%;
@@ -681,7 +681,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 600px) {
+		@media screen and (max-width: 333px) {
 
 			#footer {
 				text-align: center;
@@ -873,7 +873,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 600px) {
+		@media screen and (max-width: 333px) {
 
 			.poptrox-popup:before {
 				display: none;
