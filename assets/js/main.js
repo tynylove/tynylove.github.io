@@ -414,6 +414,7 @@
 					clearInterval(x);
 					document.getElementById("countdown").innerHTML = "Save the day 19-12-2021";
 				  }
-				}, 1000);		
+				}, 1000);	
+	
 
 })(jQuery);

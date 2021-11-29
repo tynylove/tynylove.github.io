@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600");
-@import url("fontawesome-all.min.css");
+@import url("font-awesome.min.css");
 
 /*
 	Parallelism by HTML5 UP
@@ -228,7 +228,7 @@ input, select, textarea {
 
 		}
 
-/* Icons */
+/* Icons
 
 	.icon {
 		text-decoration: none;
@@ -263,6 +263,25 @@ input, select, textarea {
 
 		.icon.brands:before {
 			font-family: 'Font Awesome 5 Brands';
+		}*/
+/* Icons */
+
+	.icon {
+		position: relative;
+		text-decoration: none;
+	}
+
+		.icon:before {
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			font-family: FontAwesome;
+			font-style: normal;
+			font-weight: normal;
+			text-transform: none !important;
+		}
+
+		.icon > .label {
+			display: none;
 		}
 
 /* Wrapper */
@@ -314,6 +333,7 @@ input, select, textarea {
 /* Scroll Zone */
 
 	.scrollZone {
+		margin-top: 50px;
 		position: fixed;
 		width: 6rem;
 		height: 100vh;
@@ -890,3 +910,270 @@ input, select, textarea {
 			}
 
 		}
+	
+	/*----- Menu Outline -----*/
+.menu-wrap {
+	width: 1%;
+    z-index: 2;
+    position: fixed;
+	right: 20px
+}
+
+.menu {
+	width: auto;
+    display: flex;
+    justify-content: flex;
+}
+
+@media screen and (max-width: 736px) {
+    
+    .menu-wrap {
+        width: 1%;
+		z-index: 2;
+		position: fixed;
+		right: 20px;
+		bottom: 5px
+    }
+    .menu {
+        justify-content: center;
+    }
+    
+}
+
+.menu li {
+	margin: 0px;
+	list-style: none;
+    font-family: 'Source Sans Pro';
+	padding: 2px;
+}
+
+.menu a, .menu a2 {
+    color: #FFFFFF;
+	transition: all linear 0.4s;
+}
+
+.menu a3 {
+    color: #000000;
+	transition: all linear 0.4s;
+}
+
+.menu li:hover > a, .menu .current-item > a {
+	text-decoration: none;
+}
+
+/*----- Top Level -----*/
+.menu > ul > li {
+	float: left;
+	display: inline-block;
+	position: relative;
+	font-size: 0.8em;
+}
+
+.menu > ul > li > a {
+    background: rgba(18, 21, 29, 0.85);
+    opacity: 0.85;
+    width: 8em;
+	padding: 2px;
+	display: inline-block;
+    text-align: center;
+	border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.menu > ul > li:hover > a, .menu > li:active > a, .menu > ul > li:hover > a2, .menu > li:active > a2 {
+	background: #FFFFFF;
+    	color: #000000;
+	cursor: pointer;
+}
+
+.menu > ul > li:hover > a3, .menu > li:active > a3 {
+	background: rgba(18, 21, 29, 0.85);
+    	color: #FFFFFF;
+	cursor: pointer;
+}
+
+.menu > ul > li > a2 {
+    background: rgba(18, 21, 29, 0.85);
+    opacity: 0.5;
+    width: 2.5em;
+	padding: 2px;
+	display: inline-block;
+    text-align: center;
+	border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.menu > ul > li > a3 {
+    background: #FFFFFF;
+    opacity: 0.5;
+    width: 2.5em;
+	padding: 2px;
+	display: inline-block;
+    text-align: center;
+	border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/*----- Menu-clicked Outline -----*/
+.menu-clicked-wrap {
+	width: 50%;
+    z-index: 2;
+    position: fixed;
+    display: none;
+}
+
+.menu-clicked {
+	width: auto;
+    display: flex;
+    justify-content: flex;
+}
+
+@media screen and (max-width: 736px) {
+    
+    .menu-clicked-wrap {
+        display: none;
+    }
+    
+}
+
+.menu-clicked li {
+	margin: 0px;
+	list-style: none;
+    font-family: 'Source Sans Pro';
+	padding: 2px;
+}
+
+.menu-clicked a {
+    color: #000000;
+	transition: all linear 0.4s;
+}
+
+.menu-clicked a2 {
+    color: #FFFFFF;
+	transition: all linear 0.4s;
+}
+
+.menu-clicked li:hover > a, .menu-clicked .current-item > a {
+	text-decoration: none;
+}
+
+/*----- Top Level -----*/
+.menu-clicked > ul > li {
+	float: left;
+	display: inline-block;
+	position: relative;
+	font-size: 0.8em;
+}
+
+.menu-clicked > ul > li > a {
+    background: #FFFFFF;
+    opacity: 0.85;
+    width: 8em;
+	padding: 2px;
+	display: inline-block;
+    text-align: center;
+	border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.menu-clicked > ul > li:hover > a, .menu-clicked > li:active > a {
+	background: rgba(18, 21, 29, 0.85);
+    	color: #FFFFFF;
+	cursor: pointer;
+}
+
+.menu-clicked > ul > li > a2 {
+    background: rgba(18, 21, 29, 0.85);
+    opacity: 0.85;
+    width: 2.5em;
+	padding: 2px;
+	display: inline-block;
+    text-align: center;
+	border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.menu-clicked > ul > li:hover > a2, .menu-clicked > li:active > a2 {
+	background: #FFFFFF;
+    	color: #000000;
+	cursor: pointer;
+}
+
+/*----- Menu-right Outline -----*/
+.menu-right-wrap {
+	width: 50%;
+    z-index: 2;
+    position: fixed;
+    right: 0px;
+}
+
+.menu-right {
+	width: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 736px) {
+    
+    .menu-right-wrap {
+        width: 100%;
+        right: auto;
+    }
+    .menu-right {
+        justify-content: center;
+    }
+    
+}
+
+.menu-right li {
+	margin: 0px;
+	list-style: none;
+    font-family: 'Source Sans Pro';
+	padding: 2px;
+}
+
+.menu-right a {
+    color: #000000;
+	transition: all linear 0.4s;
+}
+
+.menu-right li:hover > a, .menu-right .current-item > a {
+	text-decoration: none;
+}
+
+/*----- Top Level -----*/
+.menu-right > ul > li {
+	float: left;
+	display: inline-block;
+	position: relative;
+	font-size: 0.8em;
+}
+
+.menu-right > ul > li > a {
+    background: #FFFFFF;
+    opacity: 0.85;
+    width: 10em;
+	padding: 2px;
+	display: inline-block;
+    text-align: center;
+	border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.menu-right > ul > li:hover > a, .menu-right > ul > .current-item > a {
+	background: rgba(18, 21, 29, 0.85);
+    	color: #FFFFFF;
+	cursor: pointer;
+}
