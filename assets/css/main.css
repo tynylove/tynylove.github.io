@@ -624,11 +624,54 @@ input, select, textarea {
 
 		}
 		
-		@media screen and (max-width: 1500px) {
+		@media screen and (max-height: 720px) {
 
 			#main .item {
 				height: 12.8em;
 			}
+
+		}
+		
+		@media screen and (max-height: 500px) {
+
+			#main .item {
+				height: 9em;
+			}
+
+				#main .item.span-1 {
+					width: 10.2em;
+				}
+
+				#main .item.span-2 {
+					width: 15.3em;
+				}
+
+				#main .item.span-3 {
+					width: 20.4em;
+				}
+				
+				#main .item.intro h1 {
+					font-size: 2em;
+					line-height: 1em;
+				}
+
+				#main .item.intro p {
+					font-size: 0.8em;
+					line-height: 1.5em;
+					margin: 0.5em 0 0 0;
+					opacity: 0.65;
+				}
+				
+				#main .item.intro {
+					padding: 1em 1.5em;
+				}
+				
+				#main .item.thumb h2 {
+					padding: 0.5em;
+					font-size: 0.8em;
+					line-height: 1em;
+					z-index: 2;
+				}
 
 		}
 
