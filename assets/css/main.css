@@ -636,7 +636,10 @@ input, select, textarea {
 
 	#footer {
 		width: 100%;
-		padding: 1.5em;
+		padding-right: 1em;
+		padding-left: 1em;
+		padding-bottom: 0.5em;
+		padding-top: 0.5em;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
