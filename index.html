@@ -23,7 +23,7 @@
 	</nav>
 	</div>
 	
-	<div class="menu-wrap" id="menu-paused">
+	<div class="menu-wrap" id="menu-paused" style="display: none">
 	<nav class="menu">
 	    <ul class="clearfix">
 		<li><a3 onclick="playmusic()" id="play-button"><span class="icon fa-play"></span></a3></li>
@@ -161,7 +161,7 @@
 					</section>
 
 			</div>
-		<iframe id="so" style="display: none" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1354309891%3Fsecret_token%3Ds-66nffnEwJLI&color=%230066cc&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+		<iframe id="backgroundmusic" style="display: none" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1354309891%3Fsecret_token%3Ds-66nffnEwJLI&color=%230066cc&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.poptrox.min.js"></script>
@@ -172,7 +172,7 @@
 			<script src="assets/js/main.js"></script>
 			<script>
 				function pausemusic() {
-					var widget1 = SC.Widget("so");
+					var widget1 = SC.Widget("backgroundmusic");
 					widget1.pause();
 					var menu = document.getElementById("menu");
 					var menuPaused = document.getElementById("menu-paused");
@@ -181,14 +181,13 @@
 					menuPaused.style.display = "block"; 
 				}
 				function playmusic() {
-					var widget1 = SC.Widget("so");
+					var widget1 = SC.Widget("backgroundmusic");
 					widget1.play();
 				    var menu = document.getElementById("menu");
 				    var menuPaused = document.getElementById("menu-paused");
 				    menuPaused.style.display = "none";
 				    menu.style.display = "block";
 				}
-				document.addEventListener('click', () => {playmusic()}, { once: true });
 			</script>
 
 	</body>
