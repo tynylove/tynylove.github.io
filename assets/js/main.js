@@ -429,6 +429,6 @@
 		};
 	})();
 	
-	document.addEventListener('click', () => {startmusic()}, { once: true });			
+	document.addEventListener('click', () => {playmusic()}, { once: true });			
 
 })(jQuery);
