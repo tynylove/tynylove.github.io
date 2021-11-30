@@ -632,7 +632,7 @@ input, select, textarea {
 
 		}
 		
-		@media screen and (max-height: 500px) {
+		@media screen and (max-height: 450px) {
 
 			#main .item {
 				height: 9em;
