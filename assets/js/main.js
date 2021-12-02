@@ -112,7 +112,7 @@
 
 	// Poptrox.
 		$main.poptrox({
-			onPopupOpen: function() { $body.addClass('is-poptrox-visible');startmusic();},
+			onPopupOpen: function() { $body.addClass('is-poptrox-visible');},
 			onPopupClose: function() { $body.removeClass('is-poptrox-visible');},
 			overlayColor: '#1a1f2c',
 			overlayOpacity: 0.75,
@@ -418,20 +418,5 @@
 		document.getElementById("countdown").innerHTML = "Save the day 19-12-2021";
 	  }
 	}, 1000);	
-	
-	var startmusic = (function() {
-		var executed = false;
-		return function() {
-			if (!executed) {
-				executed = true;
-				var widget1 = SC.Widget("backgroundmusic");
-					widget1.play();ismusic=true;
-				var menuPaused = document.getElementById("menu-paused");
-					menu.style.display = "block";
-			}
-		};
-	})();
-	
-	document.addEventListener('click', () => {startmusic()}, { once: true });
 
 })(jQuery);

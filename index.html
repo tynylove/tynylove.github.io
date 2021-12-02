@@ -323,6 +323,7 @@
 			<script src="assets/js/main.js"></script>
 			<script>
 				var ismusic=false;
+				var executed = false;
 				const soundon=[];
 				
 				function pausemusic() {
@@ -350,6 +351,19 @@
 					else if (soundon.includes(i)||soundon.includes(i+2)) 
 							if (ismusic) playmusic();
 				}
+				
+				function startmusic() {
+					if (!executed) {
+						executed = true;
+						var widget1 = SC.Widget("backgroundmusic");
+							widget1.play();ismusic=true;
+						var menu = document.getElementById("menu");
+							menu.style.display = "block";
+					}
+					}
+	
+				document.addEventListener('click', () => {startmusic()}, { once: true });
+				
 			</script>
 
 	</body>
