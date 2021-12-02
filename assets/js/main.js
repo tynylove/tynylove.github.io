@@ -112,7 +112,7 @@
 
 	// Poptrox.
 		$main.poptrox({
-			onPopupOpen: function() { $body.addClass('is-poptrox-visible');},
+			onPopupOpen: function() { $body.addClass('is-poptrox-visible');startmusic();},
 			onPopupClose: function() { $body.removeClass('is-poptrox-visible');},
 			overlayColor: '#1a1f2c',
 			overlayOpacity: 0.75,
