@@ -333,10 +333,10 @@ input, select, textarea {
 /* Scroll Zone */
 
 	.scrollZone {
-		margin-top: 50px;
+		margin-top: 10vh;
 		position: fixed;
 		width: 6rem;
-		height: 100vh;
+		height: 90vh;
 		cursor: -moz-grab;
 		cursor: -webkit-grab;
 		cursor: -ms-grab;

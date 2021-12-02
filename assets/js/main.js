@@ -113,13 +113,16 @@
 	// Poptrox.
 		$main.poptrox({
 			onPopupOpen: function() { $body.addClass('is-poptrox-visible');startmusic();},
-			onPopupClose: function() { $body.removeClass('is-poptrox-visible'); },
+			onPopupClose: function() { $body.removeClass('is-poptrox-visible');},
 			overlayColor: '#1a1f2c',
 			overlayOpacity: 0.75,
 			popupCloserText: '',
 			popupLoaderText: '',
 			//selector: '.item.thumb a.image',
 			caption: function($a) {
+				if ($a.prev('h2').text().slice(-1)==" ")
+					return " ";
+				else
 				return $a.prev('h2').html();
 			},
 			usePopupDefaultStyling: false,
@@ -422,13 +425,13 @@
 			if (!executed) {
 				executed = true;
 				var widget1 = SC.Widget("backgroundmusic");
-					widget1.play();
+					widget1.play();ismusic=true;
 				var menuPaused = document.getElementById("menu-paused");
 					menu.style.display = "block";
 			}
 		};
 	})();
 	
-	document.addEventListener('click', () => {startmusic()}, { once: true });			
+	document.addEventListener('click', () => {startmusic()}, { once: true });
 
 })(jQuery);

@@ -135,8 +135,9 @@
 								<article class="item thumb span-2"><h2>And we'll go</h2><a href="images/fulls/43.jpg" class="image"><img src="images/thumbs/43.jpg" alt=""></a></article>
 								<article class="item thumb span-2"><h2>Kingdom of love</h2><a href="images/fulls/44.jpg" class="image"><img src="images/thumbs/44.jpg" alt=""></a></article>
 								<article class="item thumb span-1"><h2>Just say yeah</h2><a href="images/fulls/45.jpg" class="image"><img src="images/thumbs/45.jpg" alt=""></a></article>
-								<article class="item thumb span-3"><h2>I will remind you</h2><a href="count-day.html" data-poptrox="iframe,1280x920"><img src="images/thumbs/05.jpg" alt=""></a></article>
-							
+								<article class="item thumb span-1"><h2>I will remind you </h2><a href="count-day.html" data-poptrox="iframe,1280x920"><img src="images/thumbs/05.jpg" alt=""></a></article>
+								<article class="item thumb span-1"><h2>Pre-Wedding Album </h2><a href="https://youtu.be/Gnnz0gMqgW8?autoplay=1&mute=1" data-poptrox="youtube,1280x720"><img src="images/thumbs/05.jpg" alt=""></a></article>
+								
 							</div>
 
 					</section>
@@ -161,8 +162,8 @@
 					</section>
 
 			</div>
-		<iframe id="backgroundmusic" style="display: none" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1354309891%3Fsecret_token%3Ds-66nffnEwJLI&color=%230066cc&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-		<!-- Scripts -->
+			<iframe id="backgroundmusic" style="display: none" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1354309891%3Fsecret_token%3Ds-66nffnEwJLI&color=%230066cc&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+			<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.poptrox.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
@@ -171,9 +172,12 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script>
+				var ismusic=false;
+				const soundon=[];
+				
 				function pausemusic() {
 					var widget1 = SC.Widget("backgroundmusic");
-					widget1.pause();
+					widget1.pause();ismusic=false;
 					var menu = document.getElementById("menu");
 					var menuPaused = document.getElementById("menu-paused");
 					var playButton = document.getElementById("play-button");
@@ -182,11 +186,19 @@
 				}
 				function playmusic() {
 					var widget1 = SC.Widget("backgroundmusic");
-					widget1.play();
+					widget1.play();ismusic=true;
 				    var menu = document.getElementById("menu");
 				    var menuPaused = document.getElementById("menu-paused");
 				    menuPaused.style.display = "none";
 				    menu.style.display = "block";
+				}
+				
+				function automusic(i) {
+					if (soundon.includes(i+1)){
+						if (ismusic) {pausemusic();ismusic=true;};
+					} 
+					else if (soundon.includes(i)||soundon.includes(i+2)) 
+							if (ismusic) playmusic();
 				}
 			</script>
 
