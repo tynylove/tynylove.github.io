@@ -118,7 +118,7 @@
 			overlayOpacity: 0.75,
 			popupCloserText: '',
 			popupLoaderText: '',
-			//selector: '.item.thumb a.image',
+			selector: '.item.thumb a.view',
 			caption: function($a) {
 				if ($a.prev('h2').text().slice(-1)==" ")
 					return " ";
