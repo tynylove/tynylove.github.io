@@ -175,6 +175,8 @@
 			<script>
 				var ismusic=false;
 				var executed = false;
+				var xDown = null;                                                        
+				var yDown = null; 
 				const soundon=[];
 				
 				function pausemusic() {
@@ -213,7 +215,14 @@
 					}
 					}
 	
-				document.addEventListener('click', () => {startmusic()}, { once: true });
+				document.addEventListener('click', () => {startmusic()}, { once: true });				
+				document.addEventListener('touchstart', handleTouchStart, false);        
+                                  
+				function handleTouchStart(evt) {                                         
+					xDown = evt.touches[0].clientX;                                      
+					yDown = evt.touches[0].clientY;   
+				};                                                
+
 			</script>
 
 	</body>
