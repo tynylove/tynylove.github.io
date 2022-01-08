@@ -1231,3 +1231,23 @@ input, select, textarea {
     	color: #FFFFFF;
 	cursor: pointer;
 }
+
+button {
+    transition: all .5s ease;
+    color: #fff;
+    border: 2px solid white;
+    font-family:'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    font-size: 1.2em;
+    background-color : rgba(72,72,72,0.3);
+    padding: 0.3em;
+    outline: none;
+    border-radius: 4px;
+	margin: 0 0 0.3em 0.3em;
+}
+button:hover {
+    color: #484848;
+    background-color: #fff;
+}
